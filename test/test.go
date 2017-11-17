@@ -14,6 +14,7 @@ func main() {
 	b, e := ioutil.ReadAll(file)
 	if e != nil {
 		log.Fatal(e)
+		
 	}
 
 	brsa, e := rsa.PrivateEncrypt(b, "./private.pem", rsa.RSA_PKCS1_PADDING)
